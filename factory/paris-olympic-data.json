@@ -3,7 +3,7 @@
 	"location": "southeastasia",
 	"identity": {
 		"type": "SystemAssigned",
-		"principalId": "6f9b8ac7-0577-4b65-ad3b-2295078cc500",
-		"tenantId": "ed570910-d325-4362-a77a-1441a44f0cf3"
+		"principalId": "",
+		"tenantId": ""
 	}
 }
