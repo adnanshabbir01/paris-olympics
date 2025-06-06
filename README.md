@@ -1,7 +1,7 @@
 # Paris Olympics 2024
 An end-to-end data pipeline using Azure Data Factory, Data Lake, Databricks, and Synapse Analytics processes and stores data for visualization in Power BI.
 
-![Project Workflow](data/flow.png)
+![Project Workflow](data/olympicsdata/flow.png)
 
 This project showcases a complete end-to-end data engineering pipeline built using Microsoft Azure, focusing on the Paris Olympics 2024 dataset. The goal was to ingest, transform, and analyze the data using modern cloud-based tools.
 
