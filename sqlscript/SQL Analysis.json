@@ -1,0 +1,17 @@
+{
+	"name": "SQL Analysis",
+	"properties": {
+		"content": {
+			"query": "-- Finding number of athletes from each country.\nselect country, count(name) as no_of_participants from athletes group by country order by no_of_participants desc; \n\n-- Which events had the highest number of participants?\nselect disciplines, events, count(name) as no_of_participants from athletes group by disciplines, events order by no_of_participants desc;\n\n-- List the top athletes with the most medals.\nselect name, country, count(medal_type) as total_medals from medallists group by name, country order by total_medals desc;\n\n-- What is the gender distribution of athletes per country?\nselect t.country,\n       count(case when t.gender = 'Male' then 1 end) as male_athletes,\n       count(case when t.gender = 'Female' then 1 end) as female_athletes,\n       count(case when t.gender = 'Team' then 1 end) as team\nfrom (select name, country,\n       case\n           when events like '%Men%' then 'Male'\n           when events like '%Women%' then 'Female'\n           when events like '%Team%' then 'Team'\n           else 'Unknown'\n       end as gender\nfrom athletes)t\ngroup by t.country\norder by male_athletes desc, female_athletes desc, team desc;",
+			"metadata": {
+				"language": "sql"
+			},
+			"currentConnection": {
+				"databaseName": "ParisOlympicsDB",
+				"poolName": "Built-in"
+			},
+			"resultLimit": 5000
+		},
+		"type": "SqlQuery"
+	}
+}

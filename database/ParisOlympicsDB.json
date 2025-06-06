@@ -1,0 +1,25 @@
+{
+	"name": "ParisOlympicsDB",
+	"properties": {
+		"Name": "ParisOlympicsDB",
+		"EntityType": "DATABASE",
+		"Origin": {
+			"Type": "SPARK"
+		},
+		"Properties": {
+			"IsSyMSCDMDatabase": true
+		},
+		"Source": {
+			"Provider": "ADLS",
+			"Location": "abfss://paris-olympics-data@parisolympicsdatatab.dfs.core.windows.net/ParisOlympicsDB",
+			"Properties": {
+				"FormatType": "csv",
+				"LinkedServiceName": "paris-olympics-WorkspaceDefaultStorage"
+			}
+		},
+		"PublishStatus": "PUBLISHED",
+		"ObjectVersion": 2,
+		"ObjectId": "cda4cc0c-86d9-4797-8179-08084b8b5df9"
+	},
+	"type": "DATABASE"
+}
